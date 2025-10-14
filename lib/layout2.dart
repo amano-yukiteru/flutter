@@ -20,7 +20,7 @@ class Layout2 extends StatelessWidget {
               radius: 50,
               backgroundImage: AssetImage('img/smkypc.png'),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
 
             // Username
             const InfoItem(

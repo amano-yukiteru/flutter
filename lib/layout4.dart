@@ -23,7 +23,7 @@ class Layout4 extends StatelessWidget {
 
           Expanded(
             child: ListView(
-              children: const <Widget>[
+              children: <Widget>[
                 ListTile(
                   leading: Icon(Icons.person),
                   title: Text("Username"),
