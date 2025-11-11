@@ -56,7 +56,7 @@ class _Layout14State extends State<Layout14> {
                       String nama = nameControler.text;
                       String umur = nameControler.text;
                       Navigator.push(context, MaterialPageRoute(builder: (context) => Layout10(nama: nama, umur: umur),),);
-                      // ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(name)));
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(nama)));
                     }
                   },
                   child: Text("input"),
