@@ -6,12 +6,9 @@ class Layout4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         title: const Text("MyApp"),
       ),
-
-
       body: Column(
         children: [
           const CircleAvatar(

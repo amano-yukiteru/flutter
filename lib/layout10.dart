@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_1/layout11.dart';
+import 'package:tugas_1/layout13.dart';
 
 class Layout10 extends StatelessWidget {
-  const Layout10({super.key});
+  final String nama;
+  final String umur;
+
+  const Layout10({super.key, required this.nama, required this.umur});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +14,7 @@ class Layout10 extends StatelessWidget {
       appBar: AppBar(
         title:
         Text(
-          'MyApp',
+          'nama: $nama, umur :$umur',
           style: TextStyle(
             color: Colors.white,
             fontSize: 30,
@@ -42,17 +47,32 @@ class Layout10 extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      ElevatedButton.icon(onPressed: () {}, icon: Icon(Icons.call, color: Colors.green,), label: Text('Call', style: TextStyle(color: Colors.green),), style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.white70)),),
+                      ElevatedButton.icon(onPressed: () {
+                        Navigator.pop(context);
+                      },
+                        icon: Icon(Icons.call, color: Colors.green,),
+                        label: Text('Call', style: TextStyle(color: Colors.green),),
+                        style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.white70),),),
                     ],
                   ),
                   Column(
                     children: [
-                      ElevatedButton.icon(onPressed: () {}, icon: Icon(Icons.map), label: Text('Maps'), style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.white70),),),
+                      ElevatedButton.icon(onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Layout11(),),);
+                      },
+                        icon: Icon(Icons.map),
+                        label: Text('Maps'),
+                        style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.white70),),),
                     ],
                   ),
                   Column(
                     children: [
-                      ElevatedButton.icon(onPressed: () {}, icon: Icon(Icons.share, color: Colors.blue,), label: Text('Shere', style: TextStyle(color: Colors.blue),),style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.white70),),),
+                      ElevatedButton.icon(onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Layout13(),),);
+                      },
+                        icon: Icon(Icons.share, color: Colors.blue,),
+                        label: Text('Shere', style: TextStyle(color: Colors.blue),),
+                        style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.white70),),),
                     ],
                   ),
                 ],
